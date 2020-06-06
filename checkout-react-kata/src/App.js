@@ -1,11 +1,15 @@
-import React from 'react';
-import './App.css';
-import Start from './components/Start/Start';
+import React from "react";
+import { Router } from "@reach/router";
+import Start from "./components/Start/Start";
+import PricingRules from "./components/PricingRules/PricingRules";
 
 function App() {
   return (
     <div>
-     <Start />
+      <Router>
+        <Start path="/" />
+        <PricingRules path="/pricingrules" component={PricingRules} />
+      </Router>
     </div>
   );
 }

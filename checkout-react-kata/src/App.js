@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import StartScan from './components/StartScan/StartScan';
+import Start from './components/Start/Start';
 
 function App() {
   return (
     <div>
-     <StartScan />
+     <Start />
     </div>
   );
 }

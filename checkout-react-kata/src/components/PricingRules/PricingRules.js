@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from "@reach/router";
 
 class PricingRules extends Component {
     render() {
         return (
             <div>
-                <table>
+        <div>
+        <table>
                 <thead>
                     <tr>
                         A
@@ -20,6 +22,12 @@ class PricingRules extends Component {
                     </tr>
                 </thead>
                 </table>
+        </div>
+        <div>
+        <Link to="/scanitems">
+        <button>Scan Items</button>
+      </Link>
+        </div>
             </div>
         );
     }

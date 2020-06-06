@@ -1,0 +1,12 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    background-color:#F8F9FA;
+    border-radius: 3px;
+    padding: 0.25em;
+    margin: 0.25em;
+  }
+
+.HeaderButtons {
+  padding: 0.9em;
+}

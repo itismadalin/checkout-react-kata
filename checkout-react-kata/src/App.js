@@ -5,10 +5,14 @@ import PricingRules from "./components/PricingRules/PricingRules";
 import ScanItems from "./components/ScanItems/ScanItems";
 import Total from "./components/Total/Total";
 import Payment from "./components/Payment/Payment";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <div>
+    <div className="App">
+<Header />
       <Router>
         <Start path="/" />
         <PricingRules path="/pricingrules" component={PricingRules} />

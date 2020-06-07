@@ -5,9 +5,9 @@ import Button from 'react-bootstrap/Button';
 
 const Start = () => {
   return (
-    <div className="Button">
+    <div className="button">
       <Link to="/pricingrules">
-      <Button variant="success">Start</Button>
+      <Button variant="success" size="lg">Start</Button>
       </Link>
     </div>
   );

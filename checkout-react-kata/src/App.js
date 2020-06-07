@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Start path="/" />
         <PricingRules path="/pricingrules" component={PricingRules} />
-        <ScanItems path="/scanitems" component={ScanItems} />
+        <ScanItems path="/scanitems" component={ScanItems}/>
         <Total path="/total" component={Total} />
         <Payment path="/payment" component={Payment} />
       </Router>

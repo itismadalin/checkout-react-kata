@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import Button from "react-bootstrap/Button";
 import PricingRule from "../PricingRule/PricingRule";
-
 class PricingRules extends Component {
   constructor () {
       super();
@@ -28,10 +27,7 @@ class PricingRules extends Component {
             { (this.state.data.length > 0) ? <Button onClick={this.handleRemove}>Remove Last</Button> : null}
         </div>
         <div>
-          <Button onClick={this.handleSave}>Save</Button>
-        </div>
-        <div>
-          <Link to="/scanitems">
+          <Link to="/scanitems" state={this.state.data}>
             <Button variant="success" size="lg">
               Scan Items
             </Button>
@@ -45,11 +41,6 @@ class PricingRules extends Component {
     this.state.data.push({"id": this.state.data.length, "itemId": "", "unitPrice": "", "offerQty": "", "specialPrice": ""});
     this.setState(this.state); 
   };
-
-  handleSave = () => {
-    // console.log(this.state.data.length);
-    // console.log(this.state.data[4]);
-  }
 
   handlePricingRuleChange = (item) => {
     let data = this.state.data;

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 
 class ScanItems extends Component {
+  
   render() {
-    console.log(this.props.data);
+    console.log(this.props);
     return (
       <div>
         <label>Item:</label>

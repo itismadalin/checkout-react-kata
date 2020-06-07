@@ -3,6 +3,7 @@ import { Link } from "@reach/router";
 
 class ScanItems extends Component {
   render() {
+    console.log(this.props.data);
     return (
       <div>
         <label>Item:</label>

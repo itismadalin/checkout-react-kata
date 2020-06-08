@@ -11,10 +11,10 @@ class PricingRules extends Component {
   }
   state = {
     data: [
-      { id: 0, itemId: "A", unitPrice: 50, offerQty: 3, specialPrice: 130 },
-      { id: 1, itemId: "B", unitPrice: 30, offerQty: 2, specialPrice: 45 },
-      { id: 2, itemId: "C", unitPrice: 20, offerQty: "", specialPrice: "" },
-      { id: 3, itemId: "D", unitPrice: 15, offerQty: "", specialPrice: "" },
+      { id: 0, itemId: "A", unitPrice: 50, offerQty: 3, offerPrice: 130 },
+      { id: 1, itemId: "B", unitPrice: 30, offerQty: 2, offerPrice: 45 },
+      { id: 2, itemId: "C", unitPrice: 20, offerQty: 0, offerPrice: 0 },
+      { id: 3, itemId: "D", unitPrice: 15, offerQty: 0, offerPrice: 0 },
     ],
   };
 
@@ -64,9 +64,9 @@ class PricingRules extends Component {
     this.state.data.push({
       id: this.state.data.length,
       itemId: "",
-      unitPrice: "",
-      offerQty: "",
-      specialPrice: "",
+      unitPrice: 0,
+      offerQty: 0,
+      offerPrice: 0,
     });
     this.setState(this.state);
   };

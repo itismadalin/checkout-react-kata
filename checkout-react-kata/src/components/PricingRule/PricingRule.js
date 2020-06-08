@@ -17,7 +17,7 @@ class PricingRule extends Component {
           Unit Price
           <input
             onChange={this.handleUnitPriceChange}
-            type="text"
+            type="number"
             value={this.props.item.unitPrice}
             className="form-control"
           />
@@ -26,7 +26,7 @@ class PricingRule extends Component {
           Offer Qty
           <input
             onChange={this.handleOfferQtyChange}
-            type="text"
+            type="number"
             value={this.props.item.offerQty}
             className="form-control"
           />
@@ -35,8 +35,8 @@ class PricingRule extends Component {
           Special Price
           <input
             onChange={this.handleSpecialPriceChange}
-            type="text"
-            value={this.props.item.specialPrice}
+            type="number"
+            value={this.props.item.offerPrice}
             className="form-control"
           />
         </label>
@@ -52,19 +52,19 @@ class PricingRule extends Component {
 
   handleUnitPriceChange = (event) => {
     let item = this.props.item;
-    item.unitPrice = event.target.value;
+    item.unitPrice = parseInt(event.target.value);
     this.props.handlePricingRuleChange(item);
   };
 
   handleOfferQtyChange = (event) => {
     let item = this.props.item;
-    item.offerQty = event.target.value;
+    item.offerQty = parseInt(event.target.value);
     this.props.handlePricingRuleChange(item);
   };
 
   handleSpecialPriceChange = (event) => {
     let item = this.props.item;
-    item.specialPrice = event.target.value;
+    item.offerPrice = parseInt(event.target.value);
     this.props.handlePricingRuleChange(item);
   };
 }

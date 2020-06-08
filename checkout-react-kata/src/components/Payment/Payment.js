@@ -3,11 +3,11 @@ import { Link } from "@reach/router";
 import "./Payment.css";
 import Button from "react-bootstrap/Button";
 
-const Payment = () => {
+const Payment = (props) => {
   return (
     <div className="Payment">
       <div>
-        <p>Thank you for your payment.</p>
+        <p>Thank you for your payment of £{props.location.state.total}.</p>
         <p>Please press the button below to go back to the homepage...</p>
         <Link to="/">
           <Button variant="info">Done</Button>

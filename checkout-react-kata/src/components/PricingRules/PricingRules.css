@@ -1,8 +1,18 @@
-.button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    align-items: center;
+.Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  align-items: center;
+}
+
+.PricingRulesTable {
+  display: grid;
+  justify-content: center;
+}
+
+.PricingRulesButtons {
+  display: flex;
+  justify-content: space-evenly;
 }

@@ -49,8 +49,8 @@ class PricingRules extends Component {
             <br />
           </div>
         </div>
-        <div>
-          <Link to="/scanitems" state={this.state.data}>
+        <div className="Button">
+          <Link to="/scanitems" state={{ pricingRules: this.state.data }}>
             <Button variant="success" size="lg">
               Scan Items
             </Button>

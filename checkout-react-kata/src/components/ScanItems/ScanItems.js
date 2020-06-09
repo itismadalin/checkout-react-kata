@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import Button from "react-bootstrap/Button";
+import "./ScanItems.css";
 
 class ScanItems extends Component {
   constructor(props) {
@@ -23,29 +24,45 @@ class ScanItems extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.pricingRules.map((item, index) => (
-          <Button key={item.id} onClick={() => this.handleOnClick(item.id)}>
-            {item.itemId}
-          </Button>
-        ))}
+      <div className="Items">
+        <div className="ItemsButton">
+          {this.state.pricingRules.map((item, index) => (
+            <Button
+              key={item.id}
+              onClick={() => this.handleOnClick(item.id)}
+              size="lg"
+            >
+              {item.itemId}
+            </Button>
+          ))}
+        </div>
         <br />
         <br />
-        <h2 hidden={this.state.showFinalTotal}>
-          Running Total: {this.state.runningTotal}
-        </h2>
-        <h2 hidden={!this.state.showFinalTotal}>
-          Final Total: {this.state.total}
-        </h2>
+        <div className="Total">
+          <h2 hidden={this.state.showFinalTotal}>
+            Running Total: {this.state.runningTotal}
+          </h2>
+          <h2 hidden={!this.state.showFinalTotal}>
+            Final Total: {this.state.total}
+          </h2>
+        </div>
         <Button
           hidden={this.state.showFinalTotal}
           onClick={this.handleOnClickDone}
         >
           DONE
         </Button>
-        <Link to="/payment" state={{ total: this.state.total }}>
-          <Button hidden={!this.state.showFinalTotal}>PAY</Button>
-        </Link>
+        <div className="PayButton">
+          <Link to="/payment" state={{ total: this.state.total }}>
+            <Button
+              hidden={!this.state.showFinalTotal}
+              variant="success"
+              size="lg"
+            >
+              PAY
+            </Button>
+          </Link>
+        </div>
       </div>
     );
   }

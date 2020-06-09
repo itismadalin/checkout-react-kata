@@ -11,8 +11,3 @@
   display: grid;
   justify-content: center;
 }
-
-.PricingRulesButtons {
-  display: flex;
-  justify-content: space-evenly;
-}

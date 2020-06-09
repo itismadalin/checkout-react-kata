@@ -1,0 +1,33 @@
+.Items {
+  display: grid;
+  justify-content: center;
+  margin: 20px;
+  height: 10px;
+}
+
+.ItemsButton {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  margin: 20px;
+}
+
+.PayButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Total {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+button.btn.btn-primary.btn-lg {
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+}

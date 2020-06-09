@@ -16,9 +16,6 @@ const Header = () => {
             <Link to="/scanitems">
             <Button className="HeaderButtons" variant="light">Scan Items</Button>
             </Link>
-            <Link to="/total">
-            <Button className="HeaderButtons" variant="light">Total</Button>
-            </Link>
             <Link to="/payment">
             <Button className="HeaderButtons" variant="light">Payment</Button>
             </Link>

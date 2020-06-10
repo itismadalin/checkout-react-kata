@@ -9,6 +9,7 @@ class PricingRules extends Component {
     super();
     this.handlePricingRuleChange = this.handlePricingRuleChange.bind(this);
   }
+  /*  Initial state */
   state = {
     data: [
       { id: 0, itemId: "A", unitPrice: 50, offerQty: 3, offerPrice: 130 },
@@ -60,6 +61,7 @@ class PricingRules extends Component {
     );
   }
 
+  /* handleAdd() function to set a new state for adding a new row */
   handleAdd = () => {
     this.state.data.push({
       id: this.state.data.length,
@@ -71,6 +73,8 @@ class PricingRules extends Component {
     this.setState(this.state);
   };
 
+  /* handlePricingRuleChange() function to handle the changes
+  made to the PricingRule component */
   handlePricingRuleChange = (item) => {
     let data = this.state.data;
     data[item.id] = item;
@@ -79,6 +83,7 @@ class PricingRules extends Component {
     });
   };
 
+  /* handleRemove() function to set a new state for removing last row */
   handleRemove = () => {
     let data = this.state.data;
     data.pop();

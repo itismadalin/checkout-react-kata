@@ -67,6 +67,7 @@ class ScanItems extends Component {
     );
   }
 
+    /* handleOnClick() function to set a new state when hitting each item button */
   handleOnClick = (id) => {
     let basket = this.state.basket;
     basket[id]++;
@@ -76,10 +77,13 @@ class ScanItems extends Component {
     this.updateRunningTotal(id);
   };
 
+    /* handleOnClickDone() function to call the updateFinalTotal() function and update the total */
   handleOnClickDone = () => {
     this.updateFinalTotal();
   };
 
+  /* updateRunningTotal() function to set a new state 
+  after calculating it from previous total plus the newly added item */
   updateRunningTotal = (index) => {
     let runningTotal =
       this.state.runningTotal + this.state.pricingRules[index].unitPrice;
@@ -88,8 +92,11 @@ class ScanItems extends Component {
     });
   };
 
+  /* updateFinalTotal() function to set a new state for the final total
+  after the offers have been applied */
   updateFinalTotal = () => {
     let total = 0;
+     /* loop through the basket to apply offers to each individual product */
     for (let index = 0; index < this.state.basket.length; index++) {
       let pricingRule = this.state.pricingRules[index];
       let basketItem = this.state.basket[index];
